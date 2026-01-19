@@ -50,15 +50,9 @@ h1 {
   margin: 1.875rem 1.5625rem;
 }
 
-.caption {
-  margin: 0 1.5625rem;
-}
-
-
 .banner {
   background-color: var(--bg-banner);
   color: var(--white);
-  display: inline;
   padding: 10px 20px;
   text-align: center;
   margin: auto;
@@ -87,6 +81,17 @@ h1 {
   margin-left: auto;
 }
 
+/* ===== Buttons ======== */
+
+.btn-book {
+  background-color: var(--bg-banner);
+  border: none;
+  font-weight: 800;
+  color: var(--white);
+  padding: 0.5em 1.5em;
+  align-self: center;
+}
+
 /* ===== Images ========= */
 
 .item-img {
@@ -112,8 +117,14 @@ header {
   font-size: 18px;
 }
 
-.section-one{
+.section-one {
   position: relative;
+}
+
+.caption {
+  margin: 0 1.5625rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Utility Classes */
@@ -123,7 +134,7 @@ header {
 }
 
 .block {
-  display: block
+  display: block;
 }
 
 .couch {
@@ -131,7 +142,6 @@ header {
 }
 
 /* .chair {
-  color: var(--chair);
+  color: #7ea904;
   font-weight: 800;
 } */
-

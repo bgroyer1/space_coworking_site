@@ -1,0 +1,137 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --white: whitesmoke;
+  --black: #282828;
+  --bg-banner: #cd6858;
+  --couch: #5d5560;
+  --chair: #d9020f;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  /* Fonts and text */
+  color: var(--black);
+  font-family:
+    "Montserrat",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  /* Spacing and Sizes */
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+/* ===== Typography ===== */
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 1.875rem 1.5625rem;
+}
+
+.caption {
+  margin: 0 1.5625rem;
+}
+
+
+.banner {
+  background-color: var(--bg-banner);
+  color: var(--white);
+  display: inline;
+  padding: 10px 20px;
+  text-align: center;
+  margin: auto;
+  border-radius: 1px;
+  position: absolute;
+}
+
+/* ===== Lists =========== */
+
+.nav-list {
+  display: flex;
+  padding: 25px;
+  list-style: none;
+  margin: 0;
+  align-items: center;
+  gap: 0.625rem;
+  display: flex;
+}
+
+.nav-burger {
+  width: 23px;
+}
+
+.list-burger {
+  margin-top: auto;
+  margin-left: auto;
+}
+
+/* ===== Images ========= */
+
+.item-img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.icon {
+  width: 25px;
+}
+
+/* ===== Layout ========= */
+
+header {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.section-one{
+  position: relative;
+}
+
+/* Utility Classes */
+
+.bold {
+  font-weight: 800;
+}
+
+.block {
+  display: block
+}
+
+.couch {
+  color: var(--couch);
+}
+
+/* .chair {
+  color: var(--chair);
+  font-weight: 800;
+} */
+

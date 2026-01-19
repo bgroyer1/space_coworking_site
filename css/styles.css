@@ -9,7 +9,9 @@
   --black: #282828;
   --bg-banner: #cd6858;
   --couch: #5d5560;
+  --bg-chatbox: #dda15e;
   --chair: #d9020f;
+  --box-shadow: #999;
 }
 
 html {
@@ -91,6 +93,27 @@ h1 {
   padding: 0.5em 1.5em;
   align-self: center;
 }
+
+.chatbox-bg {
+  background-color: var(--bg-chatbox);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px var(--box-shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.chatbox-icon {
+  width: 50%;
+}
+
+
 
 /* ===== Images ========= */
 

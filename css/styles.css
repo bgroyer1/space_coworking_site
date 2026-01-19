@@ -40,7 +40,6 @@ body {
   line-height: 1.5;
   /* Spacing and Sizes */
   margin: 0;
-  padding: 0;
   min-height: 100%;
 }
 
@@ -52,26 +51,36 @@ h1 {
   margin: 1.875rem 1.5625rem;
 }
 
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+}
+
 .banner {
+  /* colors and text */
   background-color: var(--bg-banner);
   color: var(--white);
-  padding: 10px 20px;
   text-align: center;
+  /* padding, margin, border */
+  padding: 10px 20px;
   margin: auto;
   border-radius: 1px;
+  /* position and displays */
   position: absolute;
 }
 
 /* ===== Lists =========== */
 
 .nav-list {
+  /* position and displays */
   display: flex;
-  padding: 25px;
-  list-style: none;
-  margin: 0;
   align-items: center;
   gap: 0.625rem;
-  display: flex;
+  /* padding, margins */
+  padding: 25px;
+  margin: 0;
+  /* list style */
+  list-style: none;
 }
 
 .nav-burger {
@@ -86,34 +95,38 @@ h1 {
 /* ===== Buttons ======== */
 
 .btn-book {
-  background-color: var(--bg-banner);
-  border: none;
-  font-weight: 800;
   color: var(--white);
+  background-color: var(--bg-banner);
+  font-weight: 800;
+  border: none;
+  border-radius: 1px;
   padding: 0.5em 1.5em;
   align-self: center;
 }
 
 .chatbox-bg {
+  /* colors and text */
   background-color: var(--bg-chatbox);
+  box-shadow: 1px 1px 5px var(--box-shadow);
+  cursor: pointer;
+  /* width/height */
   width: 40px;
   height: 40px;
+  /* box model */
   border-radius: 100%;
-  cursor: pointer;
-  box-shadow: 1px 1px 5px var(--box-shadow);
+  /* flexbox */
   display: flex;
   justify-content: center;
   align-items: center;
+  /* position */
   position: fixed;
   bottom: 10px;
-  right: 10px;
+  right: max(10px, calc((100vw - 800px) / 2 + 10px));
 }
 
 .chatbox-icon {
   width: 50%;
 }
-
-
 
 /* ===== Images ========= */
 
@@ -122,6 +135,8 @@ h1 {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px var(--box-shadow);
 }
 
 .icon {
@@ -135,19 +150,26 @@ header {
   color: var(--white);
 }
 
-.logo {
-  font-weight: 700;
-  font-size: 18px;
-}
-
 .section-one {
   position: relative;
 }
 
 .caption {
-  margin: 0 1.5625rem;
+  margin: 0 1rem;
   display: flex;
+  gap: 20px;
   justify-content: space-between;
+}
+
+.wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.nav-wrapper {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* Utility Classes */
@@ -168,3 +190,45 @@ header {
   color: #7ea904;
   font-weight: 800;
 } */
+
+/* ===== Media Queries ===== */
+
+@media (max-width: 350px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    font-size: 0.75rem;
+  }
+
+  .icon {
+    width: 0.85rem;
+  }
+
+  .nav-burger {
+    width: 0.85rem;
+  }
+
+  .nav-list {
+    gap: 0.4rem;
+  }
+
+  .banner {
+    font-size: 0.75rem;
+  }
+
+  .caption {
+    flex-direction: column;
+    gap: 0;
+    font-size: 0.75rem;
+  }
+
+  .btn-book {
+    align-self: stretch;
+    font-size: 0.75rem;
+    align-self: start;
+    border-radius: 1px;
+    margin-bottom: 1rem;
+  }
+}
